@@ -1,20 +1,22 @@
-$back-color: #0A0A0A
-$fore-color: #1A1A1A
-$text-color: #999
+$back-color: #0A0A0F
+$fore-color: #1A1A2A
+$text-color: #8888AA
 
 html, body
   margin: 0
   padding: 0
   width: 100%
-  min-height: 100%
+  height: 100%
   overflow: hidden
-  overflow-y: auto
   display: flex
   align-items: center
   justify-content: center
   font-family: 'Roboto', sans-serif
-  font-size: 11px
+  font-size: 12px
   background-color: $back-color
+
+a
+  color: inherit
 
 .hidden
   display: none
@@ -25,68 +27,121 @@ html, body
   -ms-user-select: none
   user-select: none
 
-nav
-  display: grid
-  grid-template-columns: repeat(9, 108px)
-  gap: 4px
-  opacity: 1.0
-  filter: blur(0)
-  transition: opacity, filter 333ms ease-in
-  padding: 12px
-  border-radius: 12px
-  background-color: $fore-color
+main
+  display: flex
+  margin: 0
+  padding: 0
+  overflow: hidden
+  overflow-y: scroll
+  width: 100%
+  height: 100%
 
-  &.inactive
-    pointer-events: none
-    opacity: 0.08
-    filter: blur(4px)
-
-  div.work
-    margin: 0
-    padding: 12px 4px
-    height: 20px
-    background-color: lighten($back-color, 4%)
+  nav
+    margin: 0 auto
     display: flex
-    align-items: center
-    justify-content: center
-    border-radius: 4px
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2) inset, 0 -0.5px 0 0 rgba(255, 255, 255, 0.1) inset
-    color: $text-color
+    filter: blur(0)
+    transition: filter 333ms ease-in
+    border-radius: 12px
+    background-color: $back-color
+    overflow: hidden
 
-    &:hover
-      color: white
-
-    span.title
+    &.inactive
       pointer-events: none
-      text-align: center
+      filter: blur(2px)
+
+    a.work
+      display: flex
+      align-items: center
+      justify-content: center
+      color: white
+      cursor: pointer
+
+      span.title
+        opacity: 0.3
+        margin: 8px
+        text-align: center
+        pointer-events: none
 
 article
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
   position: absolute
+  background-color: rgba(0, 0, 0, 0.8)
 
-  .close
-    top: -32px
-    left: -32px
-    width: 24px
-    height: 24px
-    border-radius: 24px
-    text-align: center
-    line-height: 26px
-    color: white
-    background-color: #333333
+  .player-wrapper
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 3em
+    border-radius: 8px
+    background-color: rgba(0, 0, 0, 0.6)
     position: absolute
-    cursor: pointer
+    box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.5)
 
-    &:hover
-      color: black
-      background-color: white
+    .close
+      top: -32px
+      left: -32px
+      width: 24px
+      height: 24px
+      border-radius: 24px
+      text-align: center
+      line-height: 26px
+      color: white
+      background-color: rgba(255, 255, 255, 0.4)
+      position: absolute
+      cursor: pointer
 
-  .title
-    bottom: -1.5em
-    position: absolute
-    color: rgba(255, 255, 255, 0.4)
+      &:hover
+        color: black
+        background-color: white
 
-  .player
-    box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.05)
+    .title, .description
+      color: rgba(255, 255, 255, 0.4)
+
+      position: absolute
+    .title
+      font-weight: bold
+      top: 1em
+
+    .description
+      bottom: 1em
+
+.hexagon
+  position: absolute
+  width: 80px
+  height: 46.19px
+  background-color: $fore-color
+  margin: 23.09px 0
+
+.hexagon:before,
+.hexagon:after
+  content: ""
+  position: absolute
+  width: 0
+  border-left: 40px solid transparent
+  border-right: 40px solid transparent
+
+.hexagon:before
+  bottom: 100%
+  border-bottom: 23.09px solid $fore-color
+
+.hexagon:after
+  top: 100%
+  width: 0
+  border-top: 23.09px solid $fore-color
+
+::-webkit-scrollbar
+  width: 12px
+  height: 12px
+
+::-webkit-scrollbar-thumb
+  border: 4px solid transparent
+  background-clip: padding-box
+  -webkit-border-radius: 6px
+  background-color: $fore-color

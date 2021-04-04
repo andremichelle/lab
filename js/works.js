@@ -1208,7 +1208,7 @@ const works = [
 {
 	id: '76',
 	path: 'revive-physics-engine',
-	title: 'Revive - Physics Engine',
+	title: 'Revive Physics Engine',
 	description: 'Revive is based on Dynamic Intersection, which supports very fast moving objects. The source includes some more scenes. <a href="http://lab.andre-michelle.com./swf/f9/revive/source.zip">Source</a>',
 	swf:
 	{
@@ -1478,7 +1478,7 @@ const works = [
 {
 	id: '97',
 	path: 'soundspectrum',
-	title: 'SoundSpectrum',
+	title: 'Sound Spectrum',
 	description: 'An isometric like visualisation of an audio frequency spectrum. <a href="http://lab.andre-michelle.com./swf/f9/soundspectrum/SoundSpectrum.zip">Source</a>',
 	swf:
 	{
