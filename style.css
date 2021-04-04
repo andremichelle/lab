@@ -1,0 +1,95 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  background-color: #0A0A0A;
+}
+
+.hidden {
+  display: none;
+}
+
+.unselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(9, 108px);
+  gap: 4px;
+  opacity: 1;
+  filter: blur(0);
+  transition: opacity, filter 333ms ease-in;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #1A1A1A;
+}
+nav.inactive {
+  pointer-events: none;
+  opacity: 0.08;
+  filter: blur(4px);
+}
+nav div.work {
+  margin: 0;
+  padding: 12px 4px;
+  height: 20px;
+  background-color: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2) inset, 0 -0.5px 0 0 rgba(255, 255, 255, 0.1) inset;
+  color: #999;
+}
+nav div.work:hover {
+  color: white;
+}
+nav div.work span.title {
+  pointer-events: none;
+  text-align: center;
+}
+
+article {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+article .close {
+  top: -32px;
+  left: -32px;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  text-align: center;
+  line-height: 26px;
+  color: white;
+  background-color: #333333;
+  position: absolute;
+  cursor: pointer;
+}
+article .close:hover {
+  color: black;
+  background-color: white;
+}
+article .title {
+  bottom: -1.5em;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.4);
+}
+article .player {
+  box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.05);
+}
+
+/*# sourceMappingURL=style.css.map */

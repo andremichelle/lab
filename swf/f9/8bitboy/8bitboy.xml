@@ -1,0 +1,12 @@
+<8bitboy>
+	<parameter>
+		<!-- colors in hexformat -->
+		<param name="background" value="ffbababa" />
+		<param name="foreground" value="ff3a3a3a" />
+		<!-- [true,false] -->
+		<param name="autostart" value="false" />
+		<!-- [0-1] -->
+		<param name="volume" value=".5" />
+	</parameter>
+	<playlist phpPath="playlist.php?folder=./mod/"/>
+</8bitboy>

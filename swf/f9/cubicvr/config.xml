@@ -1,0 +1,82 @@
+<cubicvr>
+	<splashscreen url="splash.gif" timeout="3000" enable="false" />
+	<!-- enviroment variables -->
+	<env>
+		<!-- camera field of view -->
+		<param name="fov" value="128" />
+		<!-- Keycodes for zooming -->
+		<param name="zoomIn" value="38" />
+		<param name="zoomOut" value="40" />
+		<param name="zoomSpeed" value=".05" />
+		<!-- Keycodes for turning horizontal -->
+		<param name="turnLeft" value="37" />
+		<param name="turnRight" value="39" />
+		<param name="turnSpeed" value="0.02" />
+		<!-- constrain movement -->
+		<param name="constrain-horizontal" value="false" />
+		<!-- rendering improvements -->
+		<param name="motion-blur" value="false" />
+		<param name="low-resolution-while-move" value="false" />
+	</env>
+	<!-- virtual reality -->
+	<!--
+		cube textures must be sized with power of 2^x
+			where textureSize = 0: 128, 1: 256, 2: 512, 3: 1024, 4: 2048
+
+		HotSpots-def:
+			<hotspot u="110" v="12" sensitivRadius="8" action="navigateToCube" target="anotherCubeName" />
+			<hotspot u="110" v="12" sensitivRadius="8" action="navigateToURL" target="http://www.google.de" />
+	-->
+
+	<vr startcube="pelikanA">
+	
+		<cube name="pelikanA" textureSize="2" textureBlur="false">
+			<side align="up">
+				<texture url="textures/Pelikan_A5.png" />
+			</side>
+			<side align="back">
+				<texture url="textures/Pelikan_A2.png" />
+			</side>
+			<side align="right">
+				<texture url="textures/Pelikan_A1.png" />
+				<hotspot u="256" v="256" sensitivRadius="8" action="navigateToCube" target="pelikanB" />
+			</side>
+			<side align="left">
+				<texture url="textures/Pelikan_A3.png" />
+				<hotspot u="256" v="256" sensitivRadius="8" action="navigateToURL" target="./images/elkbath.jpg" />
+			</side>
+			<side align="front">
+				<texture url="textures/Pelikan_A4.png" />
+			</side>
+			<side align="down">
+				<texture url="textures/Pelikan_A6.png" />
+			</side>
+		</cube>
+		<cube name="pelikanB" textureSize="2" textureBlur="false">
+			<side align="up">
+				<texture url="textures/Pelikan_B5.png" />
+			</side>
+			<side align="back">
+				<texture url="textures/Pelikan_B2.png" />
+			</side>
+			<side align="right">
+				<texture url="textures/Pelikan_B1.png" />
+				<hotspot u="256" v="256" sensitivRadius="8" action="navigateToURL" target="./images/wald3.jpg" />
+			</side>
+			<side align="left">
+				<texture url="textures/Pelikan_B3.png" />
+				<hotspot u="256" v="256" sensitivRadius="8" action="navigateToCube" target="pelikanA" />
+			</side>
+			<side align="front">
+				<texture url="textures/Pelikan_B4.png" />
+			</side>
+			<side align="down">
+				<texture url="textures/Pelikan_B6.png" />
+			</side>
+		</cube>
+	</vr>
+</cubicvr>
+
+
+
+
