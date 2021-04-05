@@ -1,8 +1,9 @@
-// http://brenna.github.io/csshexagon/
 // TODO
 // navigation local scrolling
 // prev <> next work
 // change url, decode url
+// Find original Tonematrix
+// Revive Jarcase Instant Sampler if possible
 
 class Navigation {
     constructor(laboratory, root) {
@@ -35,6 +36,9 @@ class Navigation {
                 element.onclick = () => this.laboratory.loadWork(work);
                 const titleSpan = element.querySelector(".title");
                 titleSpan.textContent = work.title;
+                if (work.ruffle) {
+                    titleSpan.classList.add("broken");
+                }
                 this.root.appendChild(element);
                 if (i === works.length) {
                     break;
@@ -102,7 +106,13 @@ class WorkDisplay {
         this.player.style.height = swf.height + "px";
         this.player.classList.add("player");
         this.titleLabel.textContent = work.title;
-        this.descriptionLabel.innerHTML = work.description;
+        if (work.ruffle) {
+            this.descriptionLabel.classList.add("broken");
+            this.descriptionLabel.innerHTML = work.ruffle;
+        } else {
+            this.descriptionLabel.classList.remove("broken");
+            this.descriptionLabel.innerHTML = work.description;
+        }
         this.titleLabel.classList.remove("hidden");
         this.root.classList.remove("hidden");
         this.root.querySelector(".player-wrapper").appendChild(this.player);

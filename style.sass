@@ -12,7 +12,7 @@ html, body
   align-items: center
   justify-content: center
   font-family: 'Open Sans', sans-serif
-  font-size: 12px
+  font-size: 11px
   background-color: $back-color
 
 a
@@ -64,6 +64,9 @@ main
         z-index: 1
         transform: rotate(-30deg)
 
+        &.broken
+          color: orange
+
 article
   margin: 0
   padding: 0
@@ -74,7 +77,7 @@ article
   align-items: center
   justify-content: center
   position: absolute
-  background-color: rgba(0, 0, 0, 0.8)
+  background-color: rgba(0, 0, 0, 0.6)
 
   .player-wrapper
     top: 50%
@@ -113,17 +116,21 @@ article
       left: 50%
 
     .title, .description
-      color: rgba(255, 255, 255, 0.4)
-
       position: absolute
 
     .title
-      font-weight: bold
+      color: rgba(255, 255, 255, 0.6)
       top: 1em
 
     .description
+      color: rgba(255, 255, 255, 0.3)
       bottom: 1em
 
+      &.broken
+        color: orange
+
+
+//http://brenna.github.io/csshexagon/
 .hexagon
   position: absolute
   width: 80px

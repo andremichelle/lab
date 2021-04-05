@@ -8,7 +8,7 @@ html, body {
   align-items: center;
   justify-content: center;
   font-family: "Open Sans", sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   background-color: #0A0A0F;
 }
 
@@ -64,6 +64,9 @@ main nav a.work span.title {
   z-index: 1;
   transform: rotate(-30deg);
 }
+main nav a.work span.title.broken {
+  color: orange;
+}
 
 article {
   margin: 0;
@@ -75,7 +78,7 @@ article {
   align-items: center;
   justify-content: center;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 article .player-wrapper {
   top: 50%;
@@ -114,15 +117,18 @@ article .player-wrapper .close {
   left: 50%;
 }
 article .player-wrapper .title, article .player-wrapper .description {
-  color: rgba(255, 255, 255, 0.4);
   position: absolute;
 }
 article .player-wrapper .title {
-  font-weight: bold;
+  color: rgba(255, 255, 255, 0.6);
   top: 1em;
 }
 article .player-wrapper .description {
+  color: rgba(255, 255, 255, 0.3);
   bottom: 1em;
+}
+article .player-wrapper .description.broken {
+  color: orange;
 }
 
 .hexagon {
