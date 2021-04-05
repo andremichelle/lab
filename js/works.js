@@ -426,7 +426,7 @@ const works = [
                 height: '450'
             },
         flash: 7,
-        ruffle: "Feels slower than the original version",
+        ruffle: "",
         capabilities: {
             mouse: true,
             keys: false
@@ -2328,22 +2328,22 @@ const works = [
             keys: false
         }
     },
-    /*{
+    {
         id: '118',
         path: 'tonematrix',
         title: 'ToneMatrix',
-        description: 'Simple sinewave synthesizer triggered by an ordinary 16step sequencer. Each triggered step causes a force on the underlaying <a href="http://lab.andre-michelle.com/water">wave-map</a>, which makes it more cute. Based on the <a href="http://www.audiotool.com">AudioTool</a> engine thus no sources.',
+        description: 'Now part of <a href="https://www.audiotool.com">audiotool.com</a>',
         swf:
         {
-            path: './tonematrix.swf',
+            path: './swf/fl10/tonematrix.swf',
             param:
             {
                 base: './',
                 wmode: 'window',
                 AllowScriptAccess: 'always'
             },
-            width: '156',
-            height: '19'
+            width: '540',
+            height: '540'
         },
         flash: 10,
         ruffle: "AS3 N/A",
@@ -2351,7 +2351,7 @@ const works = [
             mouse: false,
             keys: false
         }
-    },*/
+    },
     {
         id: '119',
         path: 'superellipse',

@@ -173,13 +173,17 @@ article
   display: flex
   flex-direction: column
   position: absolute
-  top: 8px
+  top: 16px
   left: 8px
   color: rgba(255, 255, 255, 0.6)
+
+  .powered
+    font-size: 10px
 
   a
     display: flex
     flex-direction: column
+    text-decoration: none
 
   .status
     margin: 8px 0 0 0
@@ -191,14 +195,16 @@ article
     width: 80px
 
 h1
-  top: 0
-  right: 16px
-  padding: 0 8px
+  left: 0
+  top: 464px
+  padding: 4px 12px
+  border-bottom-left-radius: 8px
+  border-bottom-right-radius: 8px
   transform: rotate(-90deg)
-  transform-origin: right bottom
+  transform-origin: left top
   pointer-events: none
   position: absolute
   color: $text-color
   background-color: $fore-color
   margin: 0 0 8px 0
-  font-size: 14px
+  font-size: 18px
