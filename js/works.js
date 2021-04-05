@@ -93,7 +93,8 @@ const works = [
 	id: '8',
 	path: 'moonpatrol',
 	title: 'Moon Patrol',
-	description: 'My first game was a remix of the arcade game <a target="_blank" title="Wiki" href="http://en.wikipedia.org/wiki/Moon_Patrol">MoonPatrol</a>. Includes four level and some enemies. All graphics are painted with the Flash vector tools. Music by <a target="_blank" title="Audiotool Profile" href="http://www.audiotool.com/user/ole">Olaf Noetzel</a>.',
+	description: '<a target="_blank" title="Wiki" href="http://en.wikipedia.org/wiki/Moon_Patrol">MoonPatrol</a> Flash Remix. ' +
+		'Music by <a target="_blank" title="Audiotool Profile" href="http://www.audiotool.com/user/ole">Olaf Noetzel</a>.',
 	swf:
 	{
 		path: './swf/f5vintage/moonpatrol.swf',
@@ -183,7 +184,7 @@ const works = [
 	id: '13',
 	path: 'vinyl-menu',
 	title: 'Vinyl Menu',
-	description: 'Abstraction of a vinyl-record as a menu. Click on the slices for an empty content plane.',
+	description: 'Vinyl-record as a menu. Click on the slices for an empty content plane.',
 	swf:
 	{
 		path: './swf/f73d/menu.swf',
@@ -219,7 +220,7 @@ const works = [
 	id: '15',
 	path: 'shaded-3d-object',
 	title: 'Shaded 3D Object',
-	description: 'One of the first attempt to create shaded 3d objects with the Flash6 introduced drawAPI.',
+	description: 'First attempt to create shaded 3d objects drawAPI (Flash6)',
 	swf:
 	{
 		path: './swf/f73d/3dobj.swf',
@@ -237,7 +238,7 @@ const works = [
 	id: '16',
 	path: 'juice-box',
 	title: 'Juice Box',
-	description: 'A 3d model, built in 3dmax, exported to an ASCII-Format(ACE) and retyped to actionscript.',
+	description: 'A 3d model, built in 3dmax, exported to an 3D ASCII-Format.',
 	swf:
 	{
 		path: './swf/f73d/juicebox.swf',
@@ -291,7 +292,7 @@ const works = [
 	id: '19',
 	path: 'dynamic-geosphere',
 	title: 'Dynamic Geosphere',
-	description: 'A runtime tessilated geosphere. This script is originally used in 3dmax to create geospheres with different numbers of segments.',
+	description: 'A runtime tessellated geosphere. This script is originally used in 3dmax.',
 	swf:
 	{
 		path: './swf/f73d/geosphere.swf',
@@ -327,7 +328,7 @@ const works = [
 	id: '21',
 	path: 'wax-head',
 	title: 'Wax Head',
-	description: 'A 3d-head model is cut in several stripes and vectorized in flash. The stripes are rotated in isometric space.',
+	description: 'A 3d-head model is cut in several stripes and vectorized in Flash.',
 	swf:
 	{
 		path: './swf/f73d/isohead.swf',
@@ -345,7 +346,7 @@ const works = [
 	id: '22',
 	path: 'torus-knot',
 	title: 'Torus Knot',
-	description: 'A 3dmax torus knot model is cut in several stripes and vectorized in flash. The stripes are rotated in isometric space.',
+	description: 'A 3dmax torus knot is cut in several stripes and vectorized in flash',
 	swf:
 	{
 		path: './swf/f73d/isotorus.swf',
@@ -363,7 +364,7 @@ const works = [
 	id: '23',
 	path: 'pepsi-can',
 	title: 'Pepsi Can',
-	description: 'The model is orthogonally projected onto the screen to provide polygon texture mapping by skewing every texture stripe.',
+	description: '3D texture mapping in Flash7',
 	swf:
 	{
 		path: './swf/f73d/text3d.swf',
@@ -471,7 +472,7 @@ const works = [
 	id: '29',
 	path: 'raycasting',
 	title: 'Raycasting',
-	description: 'A simple flash raycaster based on this <a href="http://www.permadi.com/tutorial/raycast/">excellent tutorial</a>. Move around the maze by pressing the cursor keys.',
+	description: 'A flash raycaster based on this <a href="http://www.permadi.com/tutorial/raycast/">tutorial</a>',
 	swf:
 	{
 		path: './swf/f73d/raycasting.swf',
@@ -489,7 +490,7 @@ const works = [
 	id: '30',
 	path: 'spin-menu',
 	title: 'Spin Menu',
-	description: 'A rotatable hexagonal cylinder where a texture is projected by raycasting technic. You can also control it by cursor keys (up/down).',
+	description: 'Rotatable hexagonal cylinder',
 	swf:
 	{
 		path: './swf/f73d/spinmenu.swf',
@@ -525,7 +526,7 @@ const works = [
 	id: '32',
 	path: 'perspective-textured-boxes',
 	title: 'Perspective Textured Boxes',
-	description: 'Another name for this engine is called \'GTA Engine\'. The hack is to prerender the sidetextures as tilt. While moving the camera, they will scaled and skewed.',
+	description: '\'GTA Engine\'. The hack is to prerender the sidetextures as tilt.',
 	swf:
 	{
 		path: './swf/f73d/pers_boxes.swf',
@@ -543,7 +544,7 @@ const works = [
 	id: '33',
 	path: 'liquid-image',
 	title: 'Liquid Image',
-	description: 'This stretch effect is realized by a second masked and scaled image.',
+	description: 'Stretch effect by using a scaled image.',
 	swf:
 	{
 		path: './swf/f72d/liquid_image.swf',
@@ -579,7 +580,7 @@ const works = [
 	id: '35',
 	path: 'bubbles',
 	title: 'Bubbles',
-	description: 'Each bubble has a number of outline particles, where a bezier spline is drawn smoothly between them.',
+	description: 'Bezier spline bubbles',
 	swf:
 	{
 		path: './swf/f72d/bubbles.swf',
@@ -597,7 +598,7 @@ const works = [
 	id: '36',
 	path: 'strings',
 	title: 'Strings',
-	description: 'Particles are forced to stay in the center area, while bezier curves are drawn smoothly between them.',
+	description: 'Bezier curves drawn smoothly between particles.',
 	swf:
 	{
 		path: './swf/f72d/strings.swf',
@@ -651,7 +652,7 @@ const works = [
 	id: '39',
 	path: 'cable-clock',
 	title: 'Cable Clock',
-	description: 'A clock based on the cable physics.\nA <a href="http://files.andre-michelle.com/screensaver/cable_clock_screensaver.zip">screensaver</a> is available as well.',
+	description: 'A clock based on cable physics.',
 	swf:
 	{
 		path: './swf/f72d/cable_clock.swf',
@@ -831,7 +832,7 @@ const works = [
 	id: '53',
 	path: 'pacman',
 	title: 'Pacman',
-	description: 'Pacman clone with only one enemy and no change to get lost. Includes a runtime pathfinding algorithm. Control pacman with the cursor keys.',
+	description: 'Pacman clone with only one enemy.',
 	swf:
 	{
 		path: './swf/f7play/pacman.swf',
@@ -849,7 +850,7 @@ const works = [
 	id: '54',
 	path: 'pinball',
 	title: 'Pinball',
-	description: 'First attempt to build a pinball physics engine. This version works with dynamic intersection, but misses an accurate collision resolve with respect to time.',
+	description: 'First attempt to build a pinball physics engine.',
 	swf:
 	{
 		path: './swf/f7play/pinball.swf',
@@ -867,7 +868,7 @@ const works = [
 	id: '55',
 	path: 'supermario',
 	title: 'Supermario',
-	description: 'A tilemapping engine for supermario-like level design. Includes accurate tile-collision for Mario.',
+	description: 'A tile-mapping engine.',
 	swf:
 	{
 		path: './swf/f7play/supermario.swf',
@@ -885,7 +886,7 @@ const works = [
 	id: '56',
 	path: 'mariokart',
 	title: 'Mariokart',
-	description: 'A mode7 engine, showing an original mariokart track in GBA stage size. Move by pressing the cursor keys.',
+	description: 'A mode7 engine',
 	swf:
 	{
 		path: './swf/f7play/mariokart.swf',
@@ -921,7 +922,7 @@ const works = [
 	id: '59',
 	path: 'motiondetection',
 	title: 'Motion Detection',
-	description: 'Detects motion on rectangular areas with adjustable activity level.',
+	description: 'Detects motion on rectangular areas.',
 	swf:
 	{
 		path: './swf/camera/motion_detection.swf',
@@ -957,7 +958,7 @@ const works = [
 	id: '61',
 	path: 'tilemapping',
 	title: 'Tilemapping',
-	description: 'A fast tilemapping function working with the new flash8 copyPixels method. <a href="http://lab.andre-michelle.com./swf/f8/tilemapping.zip">Source</a>',
+	description: 'A fast tile-mapping engine in Flash8.',
 	swf:
 	{
 		path: './swf/f8/copypixels.swf',
@@ -993,7 +994,7 @@ const works = [
 	id: '63',
 	path: 'mode7',
 	title: 'Mode7',
-	description: 'A new implementation of the old fashioned mode7 engine in flash8 with a huge performance boost.',
+	description: 'A new implementation of a mode7 engine in Flash8.',
 	swf:
 	{
 		path: './swf/f8/mode7.swf',
@@ -1047,7 +1048,7 @@ const works = [
 	id: '66',
 	path: 'panorama',
 	title: 'Panorama',
-	description: 'DisplacementMap Effect with a refractoring sphere.',
+	description: 'DisplacementMap FX with a refracting sphere.',
 	swf:
 	{
 		path: './swf/f8/panorama.swf',
@@ -1065,7 +1066,7 @@ const works = [
 	id: '68',
 	path: 'fire-flame',
 	title: 'Fire Flame',
-	description: 'First attempt to create a flame with a convolution matrix and flame color palette.',
+	description: 'First attempt to create a flame.',
 	swf:
 	{
 		path: './swf/f8/fire_natural.swf',
@@ -1083,7 +1084,7 @@ const works = [
 	id: '69',
 	path: 'fire-flame-pixelstyle',
 	title: 'Fire Flame Pixelstyle',
-	description: 'Creating a flame with BitmapData.draw and paletteMap. This flame matches better in arcade games.',
+	description: 'This flame matches better in arcade games.',
 	swf:
 	{
 		path: './swf/f8/fire_pixelstyle.swf',
@@ -1119,7 +1120,7 @@ const works = [
 	id: '71',
 	path: 'water',
 	title: 'Water',
-	description: 'Water based on this <a href="http://www.gamedev.net/reference/articles/article915.asp">article</a> while using BitmapData methods and BitmapFilters, which is much faster than a AVM1 loop.',
+	description: 'Water using BitmapData and BitmapFilters.',
 	swf:
 	{
 		path: './swf/f8/water.swf',
@@ -1173,7 +1174,7 @@ const works = [
 	id: '74',
 	path: 'bitmap-particles',
 	title: 'Bitmap Particles',
-	description: 'Testing the performance with AS3. About 9800 Particles are rotated in 3D space. Hold Mousebutton and move to rotate. <a href="http://lab.andre-michelle.com./swf/f9/bitmap.particles/source.zip">Source</a>',
+	description: 'Testing the performance with AS3. About 9800 Particles are rotated in 3D space.',
 	swf:
 	{
 		path: './swf/f9/bitmap.particles/Main.swf',
@@ -1191,7 +1192,7 @@ const works = [
 	id: '75',
 	path: 'instable-connections',
 	title: 'Unstable Connections',
-	description: 'Some particles can move phreatic in space, where small distances between 2 particles create an attraction force. Interact with the mouse. <a href="http://lab.andre-michelle.com./swf/f9/unstable.connections/source.zip">Source</a>',
+	description: 'Some particles can move phreatic in space, where small distances between 2 particles create an attraction force.',
 	swf:
 	{
 		path: './swf/f9/unstable.connections/Main.swf',
@@ -1244,7 +1245,7 @@ const works = [
 {
 	id: '78',
 	path: 'physics-engine',
-	title: 'PopShapes Physicsengine',
+	title: 'PopShapes Physics Engine',
 	description: 'This physics engine works with penetration detection of any object. If a penetration (intersection) is detected the simulation will run backwards and forwards in frame-time, untill a accurate collision time is found. <a href="http://lab.andre-michelle.com./swf/f9/popshapes/source.zip">Source</a>',
 	swf:
 	{
@@ -1388,7 +1389,7 @@ const works = [
 {
 	id: '91',
 	path: 'music-video-with-bitmapfilters',
-	title: 'Music Video with BitmapFilters',
+	title: 'Music Video with Bitmap Filters',
 	description: 'Trying to make some winamp like music visualisation patterns with the flash8 introduced bitmap manipulations. Click in the flashmovie to change the pattern.\n\nMusic by <a href="http://musikdesign.ohrbits.de">Ohrbits</a>',
 	swf:
 	{
@@ -1712,7 +1713,7 @@ const works = [
 {
 	id: '114',
 	path: 'cover-flow',
-	title: 'Cover Flow (Prototype)',
+	title: 'Cover Flow',
 	description: 'Just a run on the new Flash10 3D API. <em>Press left and right to navigate.</em> <a href="http://lab.andre-michelle.com./swf/fl10/CoverFlow.source.zip">Source</a>',
 	swf:
 	{

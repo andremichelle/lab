@@ -11,7 +11,7 @@ html, body
   display: flex
   align-items: center
   justify-content: center
-  font-family: 'Roboto', sans-serif
+  font-family: 'Open Sans', sans-serif
   font-size: 12px
   background-color: $back-color
 
@@ -61,6 +61,8 @@ main
         margin: 8px
         text-align: center
         pointer-events: none
+        z-index: 1
+        transform: rotate(-30deg)
 
 article
   margin: 0
@@ -84,16 +86,15 @@ article
     position: absolute
     box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.5)
 
-    .close
-      top: -32px
-      left: -32px
+    .prev, .next, .close
       width: 24px
       height: 24px
+      bottom: -32px
       border-radius: 24px
       text-align: center
-      line-height: 26px
-      color: white
-      background-color: rgba(255, 255, 255, 0.4)
+      line-height: 24px
+      color: rgba(255, 255, 255, 0.6)
+      background-color: rgba(255, 255, 255, 0.1)
       position: absolute
       cursor: pointer
 
@@ -101,10 +102,21 @@ article
         color: black
         background-color: white
 
+    .prev
+      left: 0
+
+    .next
+      right: 0
+
+    .close
+      transform: translate(-12px, 0)
+      left: 50%
+
     .title, .description
       color: rgba(255, 255, 255, 0.4)
 
       position: absolute
+
     .title
       font-weight: bold
       top: 1em
@@ -145,3 +157,16 @@ article
   background-clip: padding-box
   -webkit-border-radius: 6px
   background-color: $fore-color
+
+.ruffle
+  display: flex
+  flex-direction: column
+  position: absolute
+  top: 4px
+  left: 4px
+  color: rgba(255, 255, 255, 0.6)
+
+  img
+    margin: 2px 0 0 0
+    transform-origin: top left
+    width: 80px

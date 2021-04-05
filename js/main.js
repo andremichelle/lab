@@ -25,7 +25,8 @@ class Navigation {
             let xn = even ? 6 : 5;
             let right = even ? padding : padding + (size + padding) / 2;
             for (let xi = 0; xi < xn; xi++) {
-                const work = works[i++];
+                const work = works[i];
+                work.index = i++;
                 const element = this.workTemplate.cloneNode(true);
                 element.style.top = top + "px";
                 element.style.left = right + "px";
@@ -67,6 +68,8 @@ class WorkDisplay {
         this.root = root;
         this.titleLabel = root.querySelector(".title");
         this.descriptionLabel = root.querySelector(".description");
+        this.prevButton = root.querySelector(".prev");
+        this.nextButton = root.querySelector(".next");
         this.closeButton = root.querySelector(".close");
         this.rufflePlayer = window.RufflePlayer;
         this.rufflePlayer.config = {
@@ -83,14 +86,17 @@ class WorkDisplay {
             "logLevel": "error",
         };
         this.closeButton.onclick = () => this.laboratory.hideWork();
+        this.prevButton.onclick = () => this.prev();
+        this.nextButton.onclick = () => this.next();
         this.ruffle = this.rufflePlayer.newest();
         this.player = null;
+        this.index = -1;
     }
 
     show(work) {
+        this.hide();
         console.log("WorkDisplay::show", work.title);
         const swf = work.swf;
-        this.player?.remove();
         this.player = this.ruffle.createPlayer();
         this.player.style.width = swf.width + "px";
         this.player.style.height = swf.height + "px";
@@ -100,6 +106,7 @@ class WorkDisplay {
         this.titleLabel.classList.remove("hidden");
         this.root.classList.remove("hidden");
         this.root.querySelector(".player-wrapper").appendChild(this.player);
+        this.index = work.index;
         this.player.load({
             url: swf.path,
             parameters: "",
@@ -107,12 +114,26 @@ class WorkDisplay {
         });
     }
 
+    prev() {
+        const newIndex = (this.index + works.length - 1) % works.length;
+        this.show(works[newIndex]);
+    }
+
+    next() {
+        const newIndex = (this.index + 1) % works.length;
+        this.show(works[newIndex]);
+    }
+
     hide() {
+        if (null === this.player) {
+            return;
+        }
         console.log("WorkDisplay::hide");
         this.titleLabel.classList.add("hidden");
         this.root.classList.add("hidden");
-        this.player?.remove();
+        this.player.remove();
         this.player = null;
+        this.index = -1;
     }
 }
 
