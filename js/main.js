@@ -1,9 +1,63 @@
 // TODO
-// navigation local scrolling
-// prev <> next work
 // change url, decode url
-// Find original Tonematrix
 // Revive Jarcase Instant Sampler if possible
+
+class SVG {
+    static create(width, height) {
+        const svg = document.createElementNS(SVG.NS, "svg");
+        svg.setAttribute("version", "1.1");
+        svg.setAttribute("viewBox", "0 0 " + width + " " + height);
+        svg.style.width = width + "px";
+        svg.style.height = height + "px";
+        svg.style.userSelect = "none";
+        svg.style.outline = "none";
+        return svg;
+    }
+
+    static createElement(name) {
+        return document.createElementNS(SVG.NS, name);
+    }
+}
+
+SVG.NS = "http://www.w3.org/2000/svg";
+
+class Hexagon {
+    constructor(title, radius) {
+        this.title = title;
+        this.radius = radius;
+        this.width = Math.ceil(Math.sqrt(3.0) * radius / 2.0) << 1;
+        this.height = Math.ceil(2.0 * radius) + 2.0;
+    }
+
+    corner(index) {
+        const angle_deg = 60.0 * index - 30.0;
+        const angle_rad = Math.PI / 180.0 * angle_deg;
+        return {
+            x: this.width / 2.0 + this.radius * Math.cos(angle_rad),
+            y: this.height / 2.0 + this.radius * Math.sin(angle_rad)
+        };
+    }
+
+    htmlElement() {
+        const root = document.createElement("DIV");
+        root.classList.add("hex");
+        const svg = SVG.create(this.width, this.height);
+        const polygon = SVG.createElement("polygon");
+        const points = [];
+        for (let i = 0; i < 6; i++) {
+            points[i] = this.corner(i);
+        }
+        polygon.setAttribute("points", points
+            .map(({x, y}) => [x.toFixed(3), y.toFixed(3)].join(","))
+            .join(" "));
+        svg.appendChild(polygon);
+        root.appendChild(svg);
+        const span = document.createElement("SPAN");
+        span.textContent = this.title;
+        root.appendChild(span);
+        return root;
+    }
+}
 
 class Navigation {
     constructor(laboratory, root) {
@@ -15,42 +69,40 @@ class Navigation {
     }
 
     build() {
-        const size = 80;
-        const padding = 2;
+        const size = 84;
+        const radius = 44;
         let w = 0;
         let h = 0;
         let i = 0;
-        let top = padding;
+        let top = 0;
         for (let yi = 0; ; yi++) {
             let even = 1 === (yi & 1);
             let xn = even ? 6 : 5;
-            let right = even ? padding : padding + (size + padding) / 2;
+            let right = even ? 0 : size / 2;
             for (let xi = 0; xi < xn; xi++) {
                 const work = works[i];
                 work.index = i++;
-                const element = this.workTemplate.cloneNode(true);
+                const element = new Hexagon(work.title, radius).htmlElement();
                 element.style.top = top + "px";
                 element.style.left = right + "px";
-                right += size + padding;
+                if (work.ruffle) {
+                    element.classList.add("broken");
+                }
+                right += size;
                 w = Math.max(w, right);
                 element.onclick = () => this.laboratory.loadWork(work);
-                const titleSpan = element.querySelector(".title");
-                titleSpan.textContent = work.title;
-                if (work.ruffle) {
-                    titleSpan.classList.add("broken");
-                }
                 this.root.appendChild(element);
                 if (i === works.length) {
                     break;
                 }
             }
-            top += size * Math.sin(Math.PI / 3.0) + padding;
+            top += size * Math.sin(Math.PI / 3.0);
             h = Math.max(h, top);
             if (i === works.length) {
                 break;
             }
         }
-        h = Math.max(h, top + size * Math.sin(Math.PI / 8.0));
+        h = Math.max(h, top + size * Math.sin(Math.PI / 16.0));
         this.root.style.width = w + "px";
         this.root.style.height = h + "px";
     }

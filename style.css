@@ -37,7 +37,7 @@ main {
   height: 100%;
 }
 main nav {
-  margin: 0;
+  margin: 16px 0;
   display: flex;
   filter: blur(0);
   left: 50%;
@@ -52,24 +52,33 @@ main nav.inactive {
   pointer-events: none;
   filter: blur(2px);
 }
-main nav a.work {
-  display: flex;
+main nav .hex {
   align-items: center;
   justify-content: center;
-  color: white;
+  position: absolute;
+  color: #8888AA;
   cursor: pointer;
+  stroke: #414169;
+  fill: #1A1A2A;
+  transition: fill 500ms;
 }
-main nav a.work span.title {
-  opacity: 0.6;
-  margin: 8px;
-  text-align: center;
-  pointer-events: none;
-  z-index: 1;
-  transform: rotate(-30deg);
+main nav .hex:hover {
+  fill: #24243a;
 }
-main nav a.work span.title.broken {
+main nav .hex.broken {
   color: orange;
   opacity: 0.4;
+}
+main nav .hex > svg > polygon {
+  position: absolute;
+}
+main nav .hex > span {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  text-align: center;
+  position: absolute;
+  pointer-events: none;
 }
 
 article {
@@ -133,34 +142,6 @@ article .player-wrapper .description {
 }
 article .player-wrapper .description.broken {
   color: orange;
-}
-
-.hexagon {
-  position: absolute;
-  width: 80px;
-  height: 46.19px;
-  background-color: #1A1A2A;
-  margin: 23.09px 0;
-}
-
-.hexagon:before,
-.hexagon:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-}
-
-.hexagon:before {
-  bottom: 100%;
-  border-bottom: 23.09px solid #1A1A2A;
-}
-
-.hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 23.09px solid #1A1A2A;
 }
 
 ::-webkit-scrollbar {

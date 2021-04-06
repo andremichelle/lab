@@ -37,7 +37,7 @@ main
   height: 100%
 
   nav
-    margin: 0
+    margin: 16px 0
     display: flex
     filter: blur(0)
     left: 50%
@@ -52,24 +52,33 @@ main
       pointer-events: none
       filter: blur(2px)
 
-    a.work
-      display: flex
+    .hex
       align-items: center
       justify-content: center
-      color: white
+      position: absolute
+      color: $text-color
       cursor: pointer
+      stroke: lighten($fore-color, 20%)
+      fill: $fore-color
+      transition: fill 500ms
 
-      span.title
-        opacity: 0.6
-        margin: 8px
+      &:hover
+        fill: lighten($fore-color, 5%)
+
+      &.broken
+        color: orange
+        opacity: 0.4
+
+      > svg > polygon
+        position: absolute
+
+      > span
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(-30deg)
         text-align: center
+        position: absolute
         pointer-events: none
-        z-index: 1
-        transform: rotate(-30deg)
-
-        &.broken
-          color: orange
-          opacity: 0.4
 
 article
   margin: 0
@@ -133,31 +142,6 @@ article
       &.broken
         color: orange
 
-
-//http://brenna.github.io/csshexagon/
-.hexagon
-  position: absolute
-  width: 80px
-  height: 46.19px
-  background-color: $fore-color
-  margin: 23.09px 0
-
-.hexagon:before,
-.hexagon:after
-  content: ""
-  position: absolute
-  width: 0
-  border-left: 40px solid transparent
-  border-right: 40px solid transparent
-
-.hexagon:before
-  bottom: 100%
-  border-bottom: 23.09px solid $fore-color
-
-.hexagon:after
-  top: 100%
-  width: 0
-  border-top: 23.09px solid $fore-color
 
 ::-webkit-scrollbar
   width: 12px
