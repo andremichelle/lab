@@ -720,7 +720,7 @@ const works = [
                 height: '160'
             },
         flash: 7,
-        ruffle: "Feels slower than original. Clipped TextField.",
+        ruffle: "Clipped TextField.",
         capabilities: {
             mouse: false,
             keys: true
