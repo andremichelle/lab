@@ -77,7 +77,7 @@ class Navigation {
         let top = 0;
         for (let yi = 0; ; yi++) {
             const even = 1 === (yi & 1);
-            const xn = even ? 16 : 15;
+            const xn = even ? 5 : 4;
             let right = even ? 0 : size / 2;
             for (let xi = 0; xi < xn; xi++) {
                 const work = works[i];
