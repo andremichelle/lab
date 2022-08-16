@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Flash Laboratory Archive</title>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://flash.andremichelle.io"/>
-    <meta property="og:title" content="André Michelle Archive"/>
-    <meta property="og:image" content="https://flash.andremichelle.io/laboratory.png"/>
-    <meta property="og:site_name" content="André Michelle Archive"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://flash.andremichelle.io" />
+    <meta property="og:title" content="André Michelle Archive" />
+    <meta property="og:image" content="https://flash.andremichelle.io/laboratory.png" />
+    <meta property="og:site_name" content="André Michelle Archive" />
     <meta property="og:description"
-          content="Good bye Flash! Thanks for 10 years of tinkering, fiddling, bothering and lots of fun. For sentimental purpose you can watch some of my old Flash experiments here."/>
+        content="Good bye Flash! Thanks for 10 years of tinkering, fiddling, bothering and lots of fun. For sentimental purpose you can watch some of my old Flash experiments here." />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta id="extViewportMeta" name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <script src="ruffle/ruffle.js"></script>
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
     <script src="js/works.js"></script>
     <script src="js/main.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<main>
-    <nav>
-        <a class="work hexagon">
-            <span class="title">Untitled Work</span>
+    <main>
+        <nav>
+            <a class="work hexagon">
+                <span class="title">Untitled Work</span>
+            </a>
+        </nav>
+    </main>
+    <article class="hidden">
+        <div class="player-wrapper">
+            <div class="prev unselect">←</div>
+            <div class="next unselect">→</div>
+            <span class="title"></span>
+            <div class="close unselect">✕</div>
+            <div class="description broken"></div>
+        </div>
+    </article>
+    <div class="ruffle">
+        <a href="https://github.com/sponsors/ruffle-rs" target="riffle">
+            <span class="powered">Powered by</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Ruffle_vector_logo.svg" alt="ruffle logo" />
         </a>
-    </nav>
-</main>
-<article class="hidden">
-    <div class="player-wrapper">
-        <div class="prev unselect">←</div>
-        <div class="next unselect">→</div>
-        <span class="title"></span>
-        <div class="close unselect">✕</div>
-        <div class="description broken"></div>
+        <span class="status">orange titles have issues</span>
     </div>
-</article>
-<div class="ruffle">
-    <a href="https://github.com/sponsors/ruffle-rs" target="riffle">
-        <span class="powered">Powered by</span>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Ruffle_vector_logo.svg" alt="ruffle logo"/>
-    </a>
-    <span class="status">orange titles have issues</span>
-</div>
-<h1>andré michelle flash laboratory archive</h1>
+    <h1>andré michelle flash laboratory archive</h1>
 </body>
+
 </html>

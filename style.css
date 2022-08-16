@@ -58,7 +58,7 @@ main nav .hex {
   position: absolute;
   color: #8888AA;
   cursor: pointer;
-  stroke: #414169;
+  stroke: #2e2e4a;
   fill: #1A1A2A;
   transition: fill 500ms;
 }
@@ -66,8 +66,8 @@ main nav .hex:hover {
   fill: #24243a;
 }
 main nav .hex.broken {
-  color: orange;
-  opacity: 0.4;
+  color: white;
+  opacity: 0.2;
 }
 main nav .hex > svg > polygon {
   position: absolute;

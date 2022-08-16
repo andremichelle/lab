@@ -58,7 +58,7 @@ main
       position: absolute
       color: $text-color
       cursor: pointer
-      stroke: lighten($fore-color, 20%)
+      stroke: lighten($fore-color, 10%)
       fill: $fore-color
       transition: fill 500ms
 
@@ -66,8 +66,8 @@ main
         fill: lighten($fore-color, 5%)
 
       &.broken
-        color: orange
-        opacity: 0.4
+        color: white
+        opacity: 0.2
 
       > svg > polygon
         position: absolute
@@ -141,7 +141,6 @@ article
 
       &.broken
         color: orange
-
 
 ::-webkit-scrollbar
   width: 12px
