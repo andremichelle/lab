@@ -1412,7 +1412,7 @@ const works = [
             height: '512'
         },
         flash: 8,
-        ruffle: "N/A",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -1436,7 +1436,7 @@ const works = [
             height: '512'
         },
         flash: 8,
-        ruffle: "N/A",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -1460,7 +1460,7 @@ const works = [
             height: '256'
         },
         flash: 8,
-        ruffle: "N/A",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -1508,7 +1508,7 @@ const works = [
             height: '256'
         },
         flash: 8,
-        ruffle: "N/A",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -1580,7 +1580,7 @@ const works = [
             height: '512'
         },
         flash: 8,
-        ruffle: "N/A",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -1628,7 +1628,7 @@ const works = [
             height: '320'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "too slow",
         capabilities: {
             mouse: false,
             keys: false
@@ -1652,7 +1652,7 @@ const works = [
             height: '384'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "too slow",
         capabilities: {
             mouse: false,
             keys: false
@@ -1676,7 +1676,7 @@ const works = [
             height: '513'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "too slow",
         capabilities: {
             mouse: false,
             keys: false
@@ -1700,7 +1700,7 @@ const works = [
             height: '320'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "too slow",
         capabilities: {
             mouse: false,
             keys: false
@@ -1724,7 +1724,7 @@ const works = [
             height: '512'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -1748,7 +1748,7 @@ const works = [
             height: '128'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -1772,7 +1772,7 @@ const works = [
             height: '512'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "not quite the original",
         capabilities: {
             mouse: false,
             keys: false
@@ -1910,7 +1910,7 @@ const works = [
             height: '512'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "",
         capabilities: {
             mouse: true,
             keys: false
@@ -1920,7 +1920,7 @@ const works = [
         id: '96',
         path: 'particle-explosion',
         title: 'Particle Explosion',
-        description: 'Combine 3000 particles, a blurfilter and a new gradient colorpalette to create some nice explosions. To be implement into games. <a href="http://lab.andre-michelle.com./swf/f9/explosion/Explosion.zip">Source</a>',
+        description: 'Click! Combine 3000 particles, a blurfilter and a new gradient colorpalette to create some nice explosions. To be implement into games.',
         swf:
         {
             path: './swf/f9/explosion/Main.swf',
@@ -1934,7 +1934,7 @@ const works = [
             height: '384'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -1958,7 +1958,7 @@ const works = [
             height: '400'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -1982,7 +1982,7 @@ const works = [
             height: '192'
         },
         flash: 8,
-        ruffle: "Nothing showing up",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -2006,7 +2006,7 @@ const works = [
             height: '256'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "does not load music",
         capabilities: {
             mouse: false,
             keys: false
@@ -2030,7 +2030,7 @@ const works = [
             height: '512'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -2054,7 +2054,7 @@ const works = [
             height: '384'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "does not update visuals",
         capabilities: {
             mouse: false,
             keys: false
@@ -2078,7 +2078,7 @@ const works = [
             height: '120'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "glitchy",
         capabilities: {
             mouse: false,
             keys: false
@@ -2102,7 +2102,7 @@ const works = [
             height: '256'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "glitchy",
         capabilities: {
             mouse: false,
             keys: false
@@ -2126,7 +2126,7 @@ const works = [
             height: '256'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "slow",
         capabilities: {
             mouse: false,
             keys: false
@@ -2150,7 +2150,7 @@ const works = [
             height: '240'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "slow",
         capabilities: {
             mouse: false,
             keys: false
@@ -2174,7 +2174,7 @@ const works = [
             height: '416'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -2222,7 +2222,7 @@ const works = [
             height: '272'
         },
         flash: 9,
-        ruffle: "AS3 N/A",
+        ruffle: "does not load music",
         capabilities: {
             mouse: false,
             keys: false
