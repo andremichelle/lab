@@ -1604,7 +1604,7 @@ const works = [
             height: '427'
         },
         flash: 8,
-        ruffle: "N/A",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -1772,7 +1772,7 @@ const works = [
             height: '512'
         },
         flash: 9,
-        ruffle: "not quite the original",
+        ruffle: "",
         capabilities: {
             mouse: false,
             keys: false
@@ -2270,7 +2270,7 @@ const works = [
             height: '320'
         },
         flash: 10,
-        ruffle: "AS3 N/A",
+        ruffle: "Some visual tricks are missing",
         capabilities: {
             mouse: false,
             keys: false

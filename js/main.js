@@ -90,7 +90,11 @@ class Navigation {
                 }
                 right += size;
                 w = Math.max(w, right);
-                element.onclick = () => this.laboratory.loadWork(work);
+                element.onclick = (event) => {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    this.laboratory.loadWork(work)
+                };
                 this.root.appendChild(element);
                 if (i === works.length) {
                     break;
@@ -170,9 +174,7 @@ class WorkDisplay {
         this.root.querySelector(".player-wrapper").appendChild(this.player);
         this.index = work.index;
         this.player.load({
-            url: swf.path,
-            parameters: "",
-            allowScriptAccess: true
+            url: swf.path, parameters: "", allowScriptAccess: true
         });
     }
 
@@ -197,12 +199,26 @@ class WorkDisplay {
         this.player = null;
         this.index = -1;
     }
+
+    isVisible() {
+        return this.player !== null
+    }
 }
 
 class Laboratory {
     constructor() {
         this.navigation = new Navigation(this, document.body.querySelector("nav"));
         this.workDisplay = new WorkDisplay(this, document.body.querySelector("article"));
+
+        window.addEventListener("click", event => {
+            if (!this.workDisplay.isVisible()) {
+                return
+            }
+            const element = this.workDisplay.root.querySelector(".player-wrapper");
+            if (!element.contains(event.target)) {
+                this.hideWork()
+            }
+        })
     }
 
     loadWork(work) {
