@@ -50,7 +50,6 @@ main nav {
 }
 main nav.inactive {
   pointer-events: none;
-  filter: blur(2px);
 }
 main nav .hex {
   align-items: center;
@@ -97,11 +96,12 @@ article .player-wrapper {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 3em;
+  padding: 4em;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.2);
   position: absolute;
-  box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 32px 0 rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(4px) brightness(200%);
 }
 article .player-wrapper .prev, article .player-wrapper .next, article .player-wrapper .close {
   width: 24px;
@@ -110,14 +110,14 @@ article .player-wrapper .prev, article .player-wrapper .next, article .player-wr
   border-radius: 24px;
   text-align: center;
   line-height: 24px;
-  color: rgba(255, 255, 255, 0.4);
-  background-color: rgba(255, 255, 255, 0.1);
+  color: black;
+  background-color: white;
   position: absolute;
   cursor: pointer;
 }
 article .player-wrapper .prev:hover, article .player-wrapper .next:hover, article .player-wrapper .close:hover {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
 }
 article .player-wrapper .prev {
   left: 0;
@@ -134,11 +134,11 @@ article .player-wrapper .title, article .player-wrapper .description {
 }
 article .player-wrapper .title {
   color: rgba(255, 255, 255, 0.6);
-  top: 1em;
+  top: 1.5em;
 }
 article .player-wrapper .description {
   color: rgba(255, 255, 255, 0.3);
-  bottom: 1em;
+  bottom: 1.5em;
 }
 article .player-wrapper .description.broken {
   color: orange;
